@@ -1,0 +1,29 @@
+intents:
+  - greet
+  - goodbye
+  - thank
+  - recommend
+  - none
+
+actions:
+  - action_recommend
+
+responses:
+  utter_greet:
+  - text: "Hey! How can I help you?"
+    buttons:
+      - title: Recommend a movie
+        payload: /recommend
+      - title: Not at all
+        payload: /none
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_welcome:
+  - text: "You're welcome."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
